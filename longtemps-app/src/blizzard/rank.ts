@@ -1,0 +1,8 @@
+export enum Rank {
+  GUILD_MASTER,
+  OFFICER,
+  OFFICER_REROLL,
+  MEMBER,
+  NEWBIE,
+  AFK,
+}

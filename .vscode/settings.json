@@ -1,0 +1,9 @@
+{
+    "exportall.config.folderListener": [
+        "/longtemps-app/src/blizzard",
+        "/longtemps-server/src/auth/interfaces",
+        "/longtemps-server/src/auth/providers",
+        "/longtemps-server/src/auth",
+        "/longtemps-app/src/api"
+    ]
+}

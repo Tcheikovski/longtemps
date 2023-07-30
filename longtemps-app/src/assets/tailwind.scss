@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    --btn-padding-x: theme("spacing.2");
+    --btn-padding-y: theme("spacing.1");
+    --btn-radius: theme("borderRadius.sm");
+    
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    border-radius: var(--btn-radius);
+    
+    @apply enabled:cursor-pointer;
+    
+    &-primary {
+      @apply bg-primary-600 enabled:hover:bg-primary-500;
+    }
+
+    &-lg {
+      --btn-padding-x: theme("spacing.4");
+      --btn-padding-y: theme("spacing.2");
+      --btn-radius: theme("borderRadius.md");
+      @apply text-lg;
+    }
+  }
+}

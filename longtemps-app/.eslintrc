@@ -1,0 +1,7 @@
+{
+  "extends": ["@nuxtjs/eslint-config-typescript", "plugin:prettier/recommended"],
+  "rules": {
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": "error"
+  }
+}
