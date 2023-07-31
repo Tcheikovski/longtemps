@@ -1,0 +1,62 @@
+# Dev
+# TODO Create prod file
+
+version: '3'
+
+services:
+  api:
+    image: longtemps_api:dev
+    build:
+      context: .
+      dockerfile: ./apps/api/Dockerfile
+      target: dev
+    ports:
+      - "${API_PORT_HOST}:${API_PORT_CONTAINER}"
+    environment:
+      NODE_ENV: development
+      PORT: "${API_PORT_CONTAINER}"
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: "${API_DB_USER}"
+      DB_PASSWORD: "${API_DB_PASSWORD}"
+      DB_DATABASE: "${API_DB_DATABASE}"
+      AUTH_ISSUER: "${API_AUTH_ISSUER}"
+      AUTH_CLIENT_ID: "${API_AUTH_CLIENT_ID}"
+      AUTH_CLIENT_SECRET: "${API_AUTH_CLIENT_SECRET}"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./apps/api/src:/usr/src/app/src:ro
+      - ./apps/api/dist:/usr/src/app/dist:rw
+      - dependencies:/usr/src/app/node_modules:rw
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: '!ChangeMe!'
+      PGDATA: /var/lib/postgresql/data/pgdata
+      API_DB_USER: ${API_DB_USER}
+      API_DB_PASSWORD: ${API_DB_PASSWORD}
+      API_DB_DATABASE: ${API_DB_DATABASE}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data:rw
+      - ./postgres/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - ${ADMINER_PORT}:8080
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  dependencies:

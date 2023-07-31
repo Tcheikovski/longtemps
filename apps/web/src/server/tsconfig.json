@@ -1,0 +1,7 @@
+{
+  "extends": "../../.nuxt/tsconfig.server.json",
+  "compilerOptions": {
+    "target": "ES2016",
+    "experimentalDecorators": true
+  }
+}

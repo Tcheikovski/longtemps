@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "eliostruyf.vscode-typescript-exportallmodules"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur",
+    "vscode.typescript-language-features"
+  ]
+}

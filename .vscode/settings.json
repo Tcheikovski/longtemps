@@ -1,9 +1,26 @@
 {
-    "exportall.config.folderListener": [
-        "/longtemps-app/src/blizzard",
-        "/longtemps-server/src/auth/interfaces",
-        "/longtemps-server/src/auth/providers",
-        "/longtemps-server/src/auth",
-        "/longtemps-app/src/api"
-    ]
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.nodePath": "node_modules/eslint/bin/eslint.js",
+  "exportall.config.folderListener": [
+    "/packages/blizzard/src/constants",
+    "/packages/blizzard/src/entities/entities",
+    "/packages/blizzard/src/entities/entities/playable_race",
+    "/packages/blizzard/src/entities/entities/playable_class",
+    "/packages/blizzard/src/entities/entities/playable_specialization",
+    "/packages/blizzard/src/entities/entities/spell",
+    "/packages/blizzard/src/entities/entities/talent",
+    "/packages/blizzard/src/types",
+    "/packages/blizzard/src/entities/entities/covenant",
+    "/packages/blizzard/src/api",
+    "/packages/blizzard/src/api/achivement",
+    "/packages/blizzard/src/api/power_type",
+    "/packages/blizzard/src/api/powerType",
+    "/packages/blizzard/src/api/title",
+    "/packages/blizzard/src/api/realm",
+    "/packages/blizzard/src/api/region",
+    "/packages/blizzard/src/api/resource",
+    "/packages/blizzard/src/types/resources"
+  ],
+  "exportall.config.semis": false,
+  "exportall.config.quote": "'"
 }

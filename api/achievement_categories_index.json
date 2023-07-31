@@ -1,0 +1,1217 @@
+{
+  "_links": {
+      "self": {
+          "href": "https://eu.api.blizzard.com/data/wow/achievement-category/?namespace=static-10.1.5_50232-eu"
+      }
+  },
+  "categories": [
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14803?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Œil du cyclone",
+          "id": 14803
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14804?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Goulet des Chanteguerres",
+          "id": 14804
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14808?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Classique",
+          "id": 14808
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15067?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Cataclysm",
+          "id": 15067
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14922?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Lich King",
+          "id": 14922
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15068?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Cataclysm",
+          "id": 15068
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14981?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Bienfaits du pèlerin",
+          "id": 14981
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15003?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "L’île des Conquérants",
+          "id": 15003
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14941?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Tournoi d'Argent",
+          "id": 14941
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15081?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Kalimdor",
+          "id": 15081
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15218?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Gorge de Vent-Caverneux",
+          "id": 15218
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15220?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Draenor",
+          "id": 15220
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15222?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Ordalie",
+          "id": 15222
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15071?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Archéologie",
+          "id": 15071
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15101?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Foire de Sombrelune",
+          "id": 15101
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15092?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Champs de bataille cotés",
+          "id": 15092
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15069?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Cataclysm",
+          "id": 15069
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15070?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Cataclysm",
+          "id": 15070
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15072?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Cataclysm",
+          "id": 15072
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15073?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Bataille de Gilnéas",
+          "id": 15073
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15163?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Temple de Kotmogu",
+          "id": 15163
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15114?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Pandarie",
+          "id": 15114
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15074?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Pics-Jumeaux",
+          "id": 15074
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15075?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Tol Barad",
+          "id": 15075
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14901?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Joug-d'hiver",
+          "id": 14901
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/96?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Quêtes",
+          "id": 96
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/81?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Tours de force",
+          "id": 81
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/201?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Réputation",
+          "id": 201
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/95?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Joueur contre Joueur",
+          "id": 95
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/97?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Exploration",
+          "id": 97
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/92?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Personnage",
+          "id": 92
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15106?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Mists of Pandaria",
+          "id": 15106
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15107?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Mists of Pandaria",
+          "id": 15107
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15110?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Pandarie",
+          "id": 15110
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15117?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Combats de mascottes",
+          "id": 15117
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15120?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Niveau",
+          "id": 15120
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15119?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Bataille",
+          "id": 15119
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15118?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Collections",
+          "id": 15118
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15162?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Mines d’Éclargent",
+          "id": 15162
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15113?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Pandarie",
+          "id": 15113
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/155?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Évènements mondiaux",
+          "id": 155
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/156?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Voile d'hiver",
+          "id": 156
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/158?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Sanssaint",
+          "id": 158
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/159?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Jardin des nobles",
+          "id": 159
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/160?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Fête lunaire",
+          "id": 160
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/161?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Solstice d'été",
+          "id": 161
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/162?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Fête des Brasseurs",
+          "id": 162
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/163?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Semaine des enfants",
+          "id": 163
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/165?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Arène",
+          "id": 165
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/168?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons et raids",
+          "id": 168
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/169?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Métiers",
+          "id": 169
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/170?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Cuisine",
+          "id": 170
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/171?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Pêche",
+          "id": 171
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/172?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Métiers",
+          "id": 172
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/187?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "De l'amour dans l'air",
+          "id": 187
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14805?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "The Burning Crusade",
+          "id": 14805
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14806?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Lich King",
+          "id": 14806
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14861?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Royaumes de l'Est",
+          "id": 14861
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14862?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Outreterre",
+          "id": 14862
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14863?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Norfendre",
+          "id": 14863
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14864?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Classique",
+          "id": 14864
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14865?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "The Burning Crusade",
+          "id": 14865
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14866?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Wrath of the Lich King",
+          "id": 14866
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14777?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Royaumes de l'Est",
+          "id": 14777
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14778?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Kalimdor",
+          "id": 14778
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14779?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Outreterre",
+          "id": 14779
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14780?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Norfendre",
+          "id": 14780
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14801?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Vallée d'Alterac",
+          "id": 14801
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/14802?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Bassin Arathi",
+          "id": 14802
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15228?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Warlords of Draenor",
+          "id": 15228
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15231?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Warlords of Draenor",
+          "id": 15231
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15232?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Draenor",
+          "id": 15232
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15234?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Héritage",
+          "id": 15234
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15235?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Draenor",
+          "id": 15235
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15246?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Collections",
+          "id": 15246
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15247?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Coffre à jouets",
+          "id": 15247
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15248?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Montures",
+          "id": 15248
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15252?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Legion",
+          "id": 15252
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15254?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Legion",
+          "id": 15254
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15255?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Legion",
+          "id": 15255
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15257?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Legion",
+          "id": 15257
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15258?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Legion",
+          "id": 15258
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15259?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Apparences",
+          "id": 15259
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15283?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "En extérieur",
+          "id": 15283
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15284?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Battle for Azeroth",
+          "id": 15284
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15266?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Honneur",
+          "id": 15266
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15268?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Promotions",
+          "id": 15268
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15269?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Montures",
+          "id": 15269
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15270?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Joueur contre Joueur",
+          "id": 15270
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15271?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids",
+          "id": 15271
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15272?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons",
+          "id": 15272
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15273?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Réputation",
+          "id": 15273
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15274?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Évènements",
+          "id": 15274
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15277?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons",
+          "id": 15277
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15278?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids",
+          "id": 15278
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15279?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Joueur contre Joueur",
+          "id": 15279
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15280?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Monnaies",
+          "id": 15280
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15292?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Rivage Bouillonnant",
+          "id": 15292
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15301?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Contenu d’extension",
+          "id": 15301
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15302?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Scénarios de Mists of Pandaria",
+          "id": 15302
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15303?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Fief de Draenor",
+          "id": 15303
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15304?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Domaines de classe de Legion",
+          "id": 15304
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15305?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Battle for Azeroth",
+          "id": 15305
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15307?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Exploration des îles",
+          "id": 15307
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15308?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Effort de guerre",
+          "id": 15308
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15298?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Battle for Azeroth",
+          "id": 15298
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15285?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Battle for Azeroth",
+          "id": 15285
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15286?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Battle for Azeroth",
+          "id": 15286
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15411?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Contenu d’extension",
+          "id": 15411
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15414?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "A’shran",
+          "id": 15414
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15422?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Ombreterre",
+          "id": 15422
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15416?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Évènements mondiaux",
+          "id": 15416
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15417?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Cœur d’Azeroth",
+          "id": 15417
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15426?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Visions de N’Zoth",
+          "id": 15426
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15428?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons d’Ombreterre",
+          "id": 15428
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15436?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Ombreterre",
+          "id": 15436
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15439?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Shadowlands",
+          "id": 15439
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15447?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Quêtes",
+          "id": 15447
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15438?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids d’Ombreterre",
+          "id": 15438
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15440?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Tourment",
+          "id": 15440
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15441?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Sanctums des congrégations",
+          "id": 15441
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15446?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Personnage",
+          "id": 15446
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15454?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Marcheurs du temps",
+          "id": 15454
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15455?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Dragonflight",
+          "id": 15455
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15466?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Dragonflight",
+          "id": 15466
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15462?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Vol à dos de Dragon",
+          "id": 15462
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15465?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Îles aux Dragons",
+          "id": 15465
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15467?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Dragonflight",
+          "id": 15467
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15468?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Dragonflight",
+          "id": 15468
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15478?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Drake des îles aux Dragons (cosmétique)",
+          "id": 15478
+      }
+  ],
+  "root_categories": [
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15076?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Guilde",
+          "id": 15076
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/96?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Quêtes",
+          "id": 96
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/81?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Tours de force",
+          "id": 81
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/201?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Réputation",
+          "id": 201
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/95?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Joueur contre Joueur",
+          "id": 95
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/97?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Exploration",
+          "id": 97
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/92?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Personnage",
+          "id": 92
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15117?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Combats de mascottes",
+          "id": 15117
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/155?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Évènements mondiaux",
+          "id": 155
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/168?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons et raids",
+          "id": 168
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/169?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Métiers",
+          "id": 169
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15234?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Héritage",
+          "id": 15234
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15246?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Collections",
+          "id": 15246
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15301?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Contenu d’extension",
+          "id": 15301
+      }
+  ],
+  "guild_categories": [
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15082?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Classique",
+          "id": 15082
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15083?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Cataclysm",
+          "id": 15083
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15084?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "The Burning Crusade",
+          "id": 15084
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15085?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Lich King",
+          "id": 15085
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15086?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Lich King",
+          "id": 15086
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15087?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Cataclysm",
+          "id": 15087
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15090?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Champs de bataille",
+          "id": 15090
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15091?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Arène",
+          "id": 15091
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15093?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Tours de force de guilde",
+          "id": 15093
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15088?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Général",
+          "id": 15088
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15089?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Réputation",
+          "id": 15089
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15153?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Mists of Pandaria",
+          "id": 15153
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15076?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Guilde",
+          "id": 15076
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15077?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Quêtes",
+          "id": 15077
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15078?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Joueur contre Joueur",
+          "id": 15078
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15079?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons et raids",
+          "id": 15079
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15080?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Métiers",
+          "id": 15080
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15154?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Mists of Pandaria",
+          "id": 15154
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15243?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Warlords of Draenor",
+          "id": 15243
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15244?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Warlords of Draenor",
+          "id": 15244
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15262?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Legion",
+          "id": 15262
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15263?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Legion",
+          "id": 15263
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15299?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Battle for Azeroth",
+          "id": 15299
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15300?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Battle for Azeroth",
+          "id": 15300
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15429?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons d’Ombreterre",
+          "id": 15429
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15442?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids d’Ombreterre",
+          "id": 15442
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15470?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Donjons de Dragonflight",
+          "id": 15470
+      },
+      {
+          "key": {
+              "href": "https://eu.api.blizzard.com/data/wow/achievement-category/15471?namespace=static-10.1.5_50232-eu"
+          },
+          "name": "Raids de Dragonflight",
+          "id": 15471
+      }
+  ]
+}
