@@ -1,4 +1,4 @@
-import { Api, Translatable } from '#blizzard/types'
+import { Api, Translatable } from '../../types'
 
 export interface Title extends Api.Resource {
   name: Translatable

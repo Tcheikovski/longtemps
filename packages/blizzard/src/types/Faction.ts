@@ -1,11 +1,10 @@
-import { Translatable } from '#blizzard/types'
+import { Translatable } from './Translatable'
+export interface Faction {
+  type: Faction.Type
+  name: Translatable
+}
 
 export namespace Faction {
-  export interface Faction {
-    type: Type
-    name: Translatable
-  }
-
-  export type Type = 'HORDE' | 'ALLIANCE'
+  export type Type = 'HORDE' | 'ALLIANCE' | 'NEUTRAL'
   export type TypeKey = Lowercase<Type>
 }

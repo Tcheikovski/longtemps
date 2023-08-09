@@ -1,4 +1,9 @@
-import { Api, Creature, PlayableClass, Spell, TechTalent, Translatable } from '#blizzard/types'
+import { Api } from '../Api'
+import { Translatable } from '../Translatable'
+import { Creature } from './Creature'
+import { PlayableClass } from './PlayableClass'
+import { Spell } from './Spell'
+import { TechTalent } from './TechTalent'
 
 export interface Covenant extends Api.Resource {
   name: Translatable

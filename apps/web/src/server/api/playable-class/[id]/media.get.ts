@@ -1,17 +1,10 @@
-import { PlayableClassMedia } from '@blizzard'
-import { H3Event } from 'h3'
+import type { PlayableClass } from '@longtemps/blizzard'
 
-const getPlayableClassMedia = async (event: H3Event) => {
-  const id = getRouterParam(event, 'id')
-  const blizzardFetch = await useBlizzardFetch(event)
-  const playableClassMedia = await blizzardFetch.static<PlayableClassMedia>(`/data/wow/media/playable-class/${id}`)
-  return playableClassMedia
-}
-
-const getCachedPlayableClassMedia = cachedFunction(getPlayableClassMedia, {
+export default defineCachedEventHandler(async (event) => {
+  const { id } = getRouterParams(event)
+  return await $blizzardFetch.static<PlayableClass.Media>(`/data/wow/media/playable-class/${id}`)
+}, {
   name: 'playable-class-media',
-  getKey: event => getRouterParam(event, 'id') ?? '',
-  maxAge: 60 * 60 * 24
+  getKey: event => getRouterParams(event).id,
+  maxAge: 86400 // 1day
 })
-
-export default defineEventHandler(event => getCachedPlayableClassMedia(event))

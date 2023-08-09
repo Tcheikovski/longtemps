@@ -1,4 +1,6 @@
-import { Api, Spell, Translatable } from '#blizzard/types'
+import { Api } from '../Api'
+import { Translatable } from '../Translatable'
+import { Spell } from './Spell'
 
 export interface TechTalent extends Api.Resource {
   talent_tree: Api.Ref<TechTalent.Tree, { name: Translatable }>

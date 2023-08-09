@@ -1,6 +1,8 @@
-import { AnyObject, Override, UnknownObject } from '#core/types'
+import { EmptyObject, Override, UnknownObject } from '@longtemps/core'
 
 export namespace Api {
+  export type Namespace = 'static' | 'dynamic' | 'profile'
+
   export interface Resource {
     id: number
   }
@@ -19,7 +21,7 @@ export namespace Api {
     U extends {} = {}
   > = Override<Key & Pick<T, K extends string ? K | 'id' : 'id'>, K extends string ? U : K>
 
-  export type Document<T extends AnyObject = UnknownObject> = T & { _links: Document.Links }
+  export type Document<T extends UnknownObject = UnknownObject, U extends UnknownObject = EmptyObject> = Override<T, U & { _links: Document.Links }>
 
   export namespace Document {
     export interface Links {
@@ -33,7 +35,7 @@ export namespace Api {
   }
 
   export namespace Media {
-    export type AssetKey = 'icon' | 'image' | 'avatar' | 'inset' | 'main-raw' | 'zoom';
+    export type AssetKey = 'icon' | 'image' | 'avatar' | 'inset' | 'main' | 'main-raw' | 'zoom';
 
     export interface Asset<T extends AssetKey = AssetKey> {
       key: T

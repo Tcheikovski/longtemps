@@ -1,13 +1,16 @@
 <template>
-  <img v-bind="$attrs" :src="src" @error="onError">
+  <figure>
+    <img v-bind="$attrs" :src="src" @error="onError">
+  </figure>
 </template>
 
 <script lang="ts" setup>
-import { Media, MediaAssetKey } from '@blizzard'
+import { Api } from '@longtemps/blizzard'
 
 const props = defineProps<{
-  media: Media;
-  tag?: MediaAssetKey;
+  media: Api.Media;
+  tag?: Api.Media.AssetKey;
+  alt?: string;
 }>()
 
 const src = ref<string>()

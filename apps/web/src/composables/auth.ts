@@ -7,3 +7,8 @@ export const useAuthUsername = () => {
   const user = useAuthUser()
   return useUsername(() => user.value?.name)
 }
+
+export const useSignIn = () => {
+  const { signIn } = useAuth()
+  return () => signIn('keycloak', { redirect: true })
+}

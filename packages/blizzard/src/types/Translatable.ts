@@ -1,4 +1,5 @@
-import { Gender, Locale } from '#blizzard/types'
+import { Gender } from './Gender'
+import { Locale } from './Locale'
 
 export type Translatable = Record<Locale, string>
 

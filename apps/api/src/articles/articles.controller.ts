@@ -26,7 +26,7 @@ export class ArticlesController {
   @Post()
   @UseGuards(OidcAuthGuard)
   create (
-    @Req() req: Request & Express.AuthenticatedRequest,
+  @Req() req: Request & Express.AuthenticatedRequest,
     @Body() createArticleDto: CreateArticleDto
   ) {
     return this.articlesService.create(createArticleDto, req.user)

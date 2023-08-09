@@ -3,7 +3,7 @@ import { getToken } from '#auth'
 
 export const useApiToken = async (event: H3Event): Promise<string | undefined> => {
   const token = await getToken({ event })
-  return token?.access_token
+  return token?.accessToken
 }
 
 export const useApiFetch = async (event: H3Event) => {

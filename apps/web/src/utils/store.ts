@@ -1,42 +1,140 @@
-import { UnwrapNestedRefs } from 'vue'
+import { type UnwrapNestedRefs } from 'vue'
+import { type UseAsyncStateReturnBase } from '@vueuse/core'
+import { type StoreDefinition } from 'pinia'
+import { Pinia } from '@pinia/nuxt/dist/runtime/composables'
 
-interface ItemState<T> {
-  state: Ref<T | null>;
-  isReady: Ref<boolean>;
-  isLoading: Ref<boolean>;
-  error: Ref<unknown>;
+type ResourceData<T> = Omit<UseAsyncStateReturnBase<T | null, any[], true>, 'execute'>
+type ResourceCollectionData<T> = Record<string, UnwrapNestedRefs<ResourceData<T>>>
+
+type ResourceState<T> = {
+  resource: ResourceData<T>
 }
 
-type CollectionState<T> = {
-  [key in string]?: UnwrapNestedRefs<ItemState<T>>;
-};
+type ResourceGetters = {}
 
-export const useAsyncCollection = <T, Params extends string[]>(fn: (...params: Params) => Promise<T>) => {
-  const collection = reactive<CollectionState<T>>({})
+type ResourceActions<T> = {
+  getItem: () => ResourceData<T>
+}
 
-  const useItem = (...params: Params): ItemState<T> => {
-    const key = params.join('-')
-    let itemState = collection[key]
-    if (!itemState) {
-      const { state, isLoading, isReady, error } = useAsyncState<T | null>(() => fn(...params), null)
-      itemState = reactive({ state, error, isLoading, isReady })
-      collection[key] = itemState
+type ResourceCollectionState<T> = {
+  collection: ResourceCollectionData<T>
+}
+
+type ResourceCollectionGetters = {}
+
+type ResourceCollectionActions<T, U extends any[]> = {
+  getItem: (...args: U) => ResourceData<T>
+}
+
+interface ResourceCollectionOptions<U extends any[]> {
+  getKey?: (...args: U) => string
+}
+
+type ResourceStoreDefinition<
+  Id extends string,
+  T,
+> = StoreDefinition<Id, ResourceState<T>, ResourceGetters, ResourceActions<T>>
+
+type ResourceCollectionStoreDefinition<
+  Id extends string,
+  T,
+  U extends any[]
+> = StoreDefinition<Id, ResourceCollectionState<T>, ResourceCollectionGetters, ResourceCollectionActions<T, U>>
+
+export const defineResourceStore = <
+  Id extends string,
+  T
+>(name: Id, fn: () => Promise<T>): ResourceStoreDefinition<Id, T> => {
+  return defineStore<Id, ResourceState<T>, ResourceGetters, ResourceActions<T>>(name, {
+    state: () => {
+      const { state, isReady, isLoading, error } = useAsyncState(() => fn(), null, {
+        immediate: true,
+        shallow: true
+      })
+
+      return { resource: { state, isReady, isLoading, error } }
+    },
+
+    actions: {
+      getItem () {
+        return toRefs(this.resource)
+      }
     }
+  })
+}
 
-    return toRefs(itemState)
+export const defineResourceCollectionStore = <
+  Id extends string,
+  T,
+  U extends any[]
+>(name: Id, fn: (...args: U) => Promise<T>, options: ResourceCollectionOptions<U> = {}): ResourceCollectionStoreDefinition<Id, T, U> => {
+  const {
+    getKey = (...args) => args.map(arg => `${arg}`).join('_')
+  } = options
+
+  return defineStore<Id, ResourceCollectionState<T>, ResourceCollectionGetters, ResourceCollectionActions<T, U>>(name, {
+    state: () => ({
+      collection: {}
+    }),
+
+    actions: {
+      getItem (...args) {
+        const key = getKey(...args)
+        if (this.collection[key]) { return toRefs(this.collection[key]) }
+
+        const { state, isReady, isLoading, error } = useAsyncState(() => fn(...args), null, {
+          immediate: true,
+          shallow: true,
+          throwError: true
+        })
+
+        const item = { state, isReady, isLoading, error }
+        this.collection[key] = reactive(item)
+
+        return item
+      }
+    }
+  })
+}
+
+export const resourceStoreToComposables = <Id extends string, T>(useStore: ResourceStoreDefinition<Id, T>) => {
+  const useItem = (pinia?: Pinia) => {
+    const store = useStore(pinia)
+    return store.getItem()
   }
 
-  const useItemAsync = (...params: Params): ItemState<T> & PromiseLike<ItemState<T>> => {
-    const item = useItem(...params)
-    const init = () => Promise.race([until(item.isReady).toBe(true), until(item.error).toBeTruthy()])
-    return {
-      ...item,
-      then: (onfulfilled, onrejected) =>
-        init()
-          .then(() => item)
-          .then(onfulfilled, onrejected)
+  const useItemAsync = (pinia?: Pinia) => {
+    const { state, isReady, isLoading, error } = useItem(pinia)
+    const shell: ResourceData<T> = { state, isReady, isLoading, error }
+    const promiseHandle: PromiseLike<ResourceData<T>> = {
+      then: (onfulfilled, onrejected) => {
+        return until(isLoading).toBe(false).then(() => shell).then(onfulfilled, onrejected)
+      }
     }
+
+    return Object.assign({}, shell, promiseHandle)
   }
 
-  return { collection, useItem, useItemAsync }
+  return makeDestructurable({ useItem, useItemAsync } as const, [useItem, useItemAsync] as const)
+}
+
+export const resourceCollectionStoreToComposables = <Id extends string, T, U extends any[]>(useStore: ResourceCollectionStoreDefinition<Id, T, U>) => {
+  const useItem = (pinia?: Pinia, ...args: { [index in keyof U]: MaybeRefOrGetter<U[index]> }) => {
+    const store = useStore(pinia)
+    return store.getItem(...args.map(val => toValue(val)) as U)
+  }
+
+  const useItemAsync = (pinia?: Pinia, ...args: { [index in keyof U]: MaybeRefOrGetter<U[index]> }) => {
+    const { state, isReady, isLoading, error } = useItem(pinia, ...args)
+    const shell: ResourceData<T> = { state, isReady, isLoading, error }
+    const promiseHandle: PromiseLike<ResourceData<T>> = {
+      then: (onfulfilled, onrejected) => {
+        return until(isLoading).toBe(false).then(() => shell).then(onfulfilled, onrejected)
+      }
+    }
+
+    return Object.assign({}, shell, promiseHandle)
+  }
+
+  return makeDestructurable({ useItem, useItemAsync } as const, [useItem, useItemAsync] as const)
 }

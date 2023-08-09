@@ -1,13 +1,32 @@
 <template>
-  <MediaAsset v-if="mediaData" :media="mediaData" class="h-16 w-16 object-cover" tag="inset" />
+  <figure class="h-16 w-16 bg-black">
+    <img v-if="src" :src="src" class="h-full w-full object-cover">
+  </figure>
 </template>
 
 <script lang="ts" setup>
-const props = defineProps<{
-  realm: string;
-  name: string;
-}>()
+import { Gender } from '@longtemps/blizzard'
 
-const store = useCharacterStore()
-const { state: mediaData } = await store.useMediaAsync(props.realm, props.name.toLowerCase())
+const props = withDefaults(defineProps<{
+  character: string
+  realm: string
+  race: number
+  gender?: Gender.Type
+}>(), {
+  gender: 'MALE'
+})
+
+const { state } = await useCharacterMediaAsync(
+  undefined,
+  () => encodeURIComponent(props.character.toLowerCase()),
+  () => encodeURIComponent(props.realm)
+)
+
+const genderId = computed(() => typeof props.gender === 'string' ? ['MALE', 'FEMALE'].indexOf(props.gender) : 0)
+const alt = computed(() => `/shadow/avatar/${props.race}-${genderId.value}.jpg`)
+const src = computed(() => {
+  const asset = state.value?.assets.find(({ key }) => key === 'avatar')
+  if (asset) { return asset.value + `?alt=${alt.value}` }
+  return null
+})
 </script>

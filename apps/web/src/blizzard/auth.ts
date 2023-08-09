@@ -12,11 +12,6 @@ export interface BlizzardToken {
   scope: string;
 }
 
-export interface BlizzardProfile {
-  id: number;
-  wow_accounts: WowAccount[];
-}
-
 export interface WowAccount {
   id: number;
   characters: {
@@ -31,4 +26,9 @@ export interface WowAccount {
     faction: Faction;
     level: number;
   }[];
+}
+
+export interface BlizzardProfile {
+  id: number;
+  wow_accounts: WowAccount[];
 }

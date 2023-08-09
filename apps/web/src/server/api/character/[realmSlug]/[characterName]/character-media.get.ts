@@ -1,25 +1,13 @@
-import { CharacterMedia } from '@blizzard'
-import { H3Event } from 'h3'
+import { Character } from '@longtemps/blizzard'
 
-const getCharacterMedia = async (event: H3Event) => {
-  const realmSlug = getRouterParam(event, 'realmSlug')!
-  const characterName = getRouterParam(event, 'characterName')!
-  const blizzardFetch = await useBlizzardFetch(event)
-  const characterMedia = await blizzardFetch.profile<CharacterMedia>(
-    `/profile/wow/character/${realmSlug}/${characterName}/character-media`
-  )
-
-  return characterMedia
-}
-
-const getCachedCharacterMedia = cachedFunction(getCharacterMedia, {
+export default defineCachedEventHandler(async (event) => {
+  const { realmSlug, characterName } = getRouterParams(event)
+  return await $blizzardFetch.profile<Character.Media>(`/profile/wow/character/${realmSlug}/${characterName}/character-media`)
+}, {
   name: 'character-media',
   getKey: (event) => {
-    const realmSlug = getRouterParam(event, 'realmSlug')!
-    const characterName = getRouterParam(event, 'characterName')!
+    const { realmSlug, characterName } = getRouterParams(event)
     return `${characterName}-${realmSlug}`
   },
-  maxAge: 60 * 60 * 24
+  maxAge: 86400 // 1 day
 })
-
-export default defineEventHandler(event => getCachedCharacterMedia(event))

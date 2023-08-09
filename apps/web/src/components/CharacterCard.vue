@@ -11,7 +11,7 @@
       }"
     >
       <Suspense>
-        <CharacterAvatar :realm="character.realm.slug" :name="character.name.toLowerCase()" />
+        <CharacterAvatar :character="character.name" :realm="character.realm.slug" :race="character.playable_race.id" :gender="gender?.type" />
         <template #fallback>
           <img
             class="h-16 w-16 bg-black"
@@ -52,9 +52,9 @@
 </template>
 
 <script lang="ts" setup>
-import type { Character, Locale, PlayableClass, PlayableRace } from '@blizzard'
+import type { Character, Locale, PlayableClass, PlayableRace } from '@longtemps/blizzard'
 
-interface CharacterProps extends Pick<Character, 'id' | 'name' | 'realm' | 'level'> {
+interface CharacterProps extends Pick<Character, 'id' | 'name' | 'realm' | 'level' | 'gender'> {
   playable_class: Pick<PlayableClass, 'id'>;
   playable_race: Pick<PlayableRace, 'id'>;
 }
@@ -64,12 +64,13 @@ const props = defineProps<{
   rank?: number;
 }>()
 
-const store = useCharacterStore()
-const { t, locale } = useI18n<undefined, Locale>()
+const character = toRef(props, 'character')
 const { data: auth } = useAuth()
-const { state: characterData, error: characterError } = await store.useCharacterAsync(
-  props.character.realm.slug,
-  props.character.name.toLowerCase()
+const { t, locale } = useI18n<undefined, Locale>()
+const { state: characterData, error: characterError } = useCharacter(
+  undefined,
+  () => props.character.name.toLowerCase(),
+  () => props.character.realm.slug
 )
 
 const gender = computed(() => characterData.value?.gender ?? null)
@@ -81,7 +82,7 @@ const name = computed(() => {
     const name = characterData.value.name
     const title =
       characterData.value.active_title &&
-      getTranslatedValue(characterData.value.active_title?.display_string, locale.value)
+      getTranslatedValue(characterData.value.active_title.display_string, locale.value)
     return title ? title.replace('{name}', name) : name
   }
 
@@ -94,11 +95,7 @@ const rank = computed(() => {
 })
 
 const isOwned = computed(() => {
-  return (
-    auth.value?.user?.wowAccounts
-      ?.flatMap(({ characters }) => characters)
-      .some(character => character.id === characterData.value?.id) ?? false
-  )
+  return auth.value?.user.profile.wow_accounts.some(account => account.characters.some(({ id }) => id === character.value.id))
 })
 </script>
 

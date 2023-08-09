@@ -1,4 +1,6 @@
-import { Api, PlayableSpecialization, Translatable } from '#blizzard/types'
+import { Api } from '../Api'
+import { Translatable } from '../Translatable'
+import { PlayableSpecialization } from './PlayableSpecialization'
 
 export interface Creature extends Api.Resource {
   name: Translatable;

@@ -1,5 +1,4 @@
 import { Inject, Injectable } from '@nestjs/common'
-import { UserinfoResponse } from 'openid-client'
 import { UsersService } from '../users/users.service'
 import { User } from '../users/user.entity'
 import { OidcClient } from './providers'

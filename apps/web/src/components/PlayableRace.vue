@@ -6,14 +6,11 @@
 </template>
 
 <script lang="ts" setup>
-import { GenderType } from '@blizzard'
+import { Gender } from '@longtemps/blizzard'
 const props = defineProps<{
   id: number;
-  gender?: GenderType | null;
+  gender?: Gender.Type | null;
 }>()
 
-const store = usePlayableRaceStore()
-const { state: playableRace, isReady } = store.usePlayableRace(props.id.toString())
-
-await until(isReady).toBe(true)
+const { state: playableRace } = await usePlayableRaceAsync(undefined, () => props.id)
 </script>

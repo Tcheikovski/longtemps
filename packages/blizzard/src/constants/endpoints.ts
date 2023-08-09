@@ -1,7 +1,7 @@
-import { Region } from '#blizzard/types'
+import { Region } from '../types'
 
-type ApiEndpoints = Record<Region.Key, `https://${string}`>
-type AuthEndpoints = Record<Region.Key, `https://oauth.${string}`>
+type ApiEndpoints = Record<Region.TagKey, `https://${string}`>
+type AuthEndpoints = Record<Region.TagKey, `https://oauth.${string}`>
 
 export const API_ENDPOINT = {
   us: 'https://us.api.blizzard.com',

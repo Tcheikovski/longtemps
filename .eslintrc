@@ -1,16 +1,5 @@
 {
   "root": true,
-  "extends": [
-    "@nuxtjs/eslint-config-typescript"
-  ],
-  "rules": {
-    "no-use-before-define": [
-      "error",
-      {
-        "functions": false,
-        "classes": false,
-        "variables": false
-      }
-    ]
-  }
+  "extends": ["@nuxtjs/eslint-config-typescript"],
+  "rules": {}
 }

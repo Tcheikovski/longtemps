@@ -1,33 +1,50 @@
-import { BattlenetRuntimeConfig, Locale as BlizzardLocale } from "./blizzard";
+import { Region } from "@longtemps/blizzard";
 
-declare module "nuxt/schema" {
-  interface RuntimeConfig {
-    battlenet: BattlenetRuntimeConfig;
+interface AuthRuntimeConfig {
+  origin: string
+  basePath: string
+  secret: string
+}
+
+interface KeycloakRuntimeConfig {
+  origin: string
+  realm: string
+  clientId: string
+  clientSecret: string
+}
+
+interface BattlenetRuntimeConfig {
+  region: Region.TagKey
+  clientId: string
+  clientSecret: string
+}
+
+interface GuildPublicRuntimeConfig {
+  connectedRealmId: string
+  realmSlug: string
+  nameSlug: string
+}
+
+declare module 'nuxt/schema' {
+  export interface RuntimeConfig {
+    auth: AuthRuntimeConfig
+    keycloak: KeycloakRuntimeConfig
+    battlenet: BattlenetRuntimeConfig
   }
 
-  interface PublicRuntimeConfig {
-    battlenet: BattlenetPublicRuntimeConfig;
+  export interface PublicRuntimeConfig {
+    guild: GuildPublicRuntimeConfig
   }
 }
 
-declare module "nitropack" {
-  interface NitroRuntimeConfig {
-    battlenet: BattlenetRuntimeConfig;
+declare module 'nitropack' {
+  export interface NitroRuntimeConfig {
+    auth: AuthRuntimeConfig
+    keycloak: KeycloakRuntimeConfig
+    battlenet: BattlenetRuntimeConfig
   }
+
+  export interface NitroRuntimeHooks {}
 }
 
-declare module "vue-i18n" {
-  export declare type Locale = BlizzardLocale;
-}
-
-declare module "@intlify/core-base" {
-  export declare type Locale = BlizzardLocale;
-}
-
-declare global {
-  interface String {
-    toLowerCase<T extends this>(this: T): Lowercase<T>
-  }
-}
-
-export {};
+export { };

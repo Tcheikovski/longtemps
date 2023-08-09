@@ -1,4 +1,6 @@
-import { Api, Faction, Translatable } from '#blizzard/types'
+import { Api } from '../Api'
+import { Faction } from '../Faction'
+import { Translatable } from '../Translatable'
 
 export interface Achievement extends Api.Resource {
   category: Api.Ref<Achievement.Category, 'name'>
@@ -15,12 +17,7 @@ export interface Achievement extends Api.Resource {
 
 export namespace Achievement {
   export type Media = Api.Media<'icon'>
-  export type CriteriaOperatorType = 'COMPLETE_AT_LEAST' | 'AND'
-
-  export interface CriteriaOperator {
-    type: CriteriaOperatorType
-    name: Translatable
-  }
+  export type CriteriaOperator = 'COMPLETE_AT_LEAST' | 'AND'
 
   interface CriteriaBase extends Api.Resource {
     description: Translatable
@@ -30,7 +27,10 @@ export namespace Achievement {
   export interface SingleCriteria extends CriteriaBase { }
 
   export interface MultipleCriteria extends CriteriaBase {
-    operator: CriteriaOperator
+    operator: {
+      type: CriteriaOperator
+      name: Translatable
+    }
     child_criteria: SingleCriteria[]
   }
 

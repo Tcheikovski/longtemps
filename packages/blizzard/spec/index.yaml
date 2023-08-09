@@ -1,0 +1,60 @@
+openapi: "3.0.0"
+info:
+  title: Battle.net World of Warcraft Community API
+  description: The public APIs for the Battle.net World of Warcraft community data.
+  version: "1.0.0"
+servers:
+  - url: "https://{hostname}/"
+    variables:
+      hostname:
+        default: 'us.api.battle.net'
+        description: Customer ID assigned by the service provider
+        enum:
+          - 'us.api.battle.net'
+          - 'eu.api.battle.net'
+          - 'kr.api.battle.net'
+          - 'tw.api.battle.net'
+paths:
+  /foo:
+    get:
+      security:
+        - openId: []
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  securitySchemes:
+    openId:
+      type: openIdConnect
+      openIdConnectUrl: https://oauth.battle.net/.well-known/openid-configuration
+  schemas:
+    # Error Schemas
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      additionalProperties: false
+      properties:
+        code:
+          type: string
+          maxLength: 255
+          pattern: ^[A-Za-z0-9]{1,255}$
+        message:
+          type: string
+          maxLength: 255
+          pattern: ^[A-Za-z0-9]{1,255}$
+        fields:
+          type: string
+          maxLength: 255
+          pattern: ^[A-Za-z0-9]{1,255}$

@@ -2,9 +2,6 @@
   "name": "@longtemps/web",
   "version": "0.0.0",
   "private": true,
-  "repository": {},
-  "license": "MIT",
-  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -29,12 +26,14 @@
     "prettier": "^2.8.8",
     "sass": "^1.63.6",
     "tailwind-scrollbar": "^3.0.4",
-    "typescript": "^5.0.2",
-    "vue-tsc": "^1.2.0"
+    "typescript": "^5.0.2"
   },
   "dependencies": {
-    "@longtemps/core": "workspace:../../packages/kit",
+    "@abraham/reflection": "^0.12.0",
     "@auth/typeorm-adapter": "^1.0.1",
+    "@longtemps/blizzard": "workspace:../../packages/blizzard",
+    "@longtemps/core": "workspace:../../packages/core",
+    "@longtemps/di": "workspace:../../packages/di",
     "@pinia/nuxt": "^0.4.11",
     "@vueuse/nuxt": "^10.2.1",
     "pg": "^8.11.1",

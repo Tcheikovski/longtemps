@@ -1,4 +1,8 @@
-import { Api, PlayableRace, PlayableSpecialization, PowerType, Translatable } from '#blizzard/types'
+import { Api } from '../Api'
+import { Translatable } from '../Translatable'
+import { PlayableRace } from './PlayableRace'
+import { PlayableSpecialization } from './PlayableSpecialization'
+import { PowerType } from './PowerType'
 
 export interface PlayableClass extends Api.Resource {
   name: Translatable

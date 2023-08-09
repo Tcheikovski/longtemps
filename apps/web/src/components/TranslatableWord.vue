@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { Locale, Translatable } from '@blizzard'
+import { Locale, Translatable } from '@longtemps/blizzard'
 
 const props = defineProps<{
   value: Translatable;

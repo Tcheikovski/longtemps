@@ -1,5 +1,5 @@
 <template>
-  <div role="banner" class="p-4 text-center">
+  <div v-if="guild" role="banner" class="p-4 text-center">
     <h1 class="text-4xl whitespace-nowrap" translate="no">
       <span>{{ guild.name }}</span>
       <span> - </span>
@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-const guild = await useGuildAsync()
+const { state: guild } = await useGuildAsync()
 const { t, localeProperties } = useI18n()
 
 const formatDate = (date: Date | number) => {

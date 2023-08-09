@@ -11,7 +11,7 @@ import { DatabaseConfig } from './database.config'
       imports: [ConfigModule.forFeature(DatabaseConfig)],
       inject: [DatabaseConfig.KEY],
       useFactory: (config: DatabaseConfig) => {
-        return Promise.resolve({
+        return {
           type: 'postgres',
           host: config.host,
           port: config.port,
@@ -20,10 +20,7 @@ import { DatabaseConfig } from './database.config'
           database: config.database,
           entities: [User, Article],
           synchronize: true
-        } as any).then((c) => {
-          console.log(c)
-          return c
-        })
+        }
       }
     })
   ]

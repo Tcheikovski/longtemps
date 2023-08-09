@@ -1,12 +1,10 @@
-import { Locale } from '@blizzard'
-
-export const getTranslatedValue = (obj: Record<string, string>, locale: Locale): string => {
-  const { fallbackLocale, defaultLocale } = useI18n<undefined, Locale>()
+export const getTranslatedValue = (obj: Record<string, string>, locale: string): string => {
+  const { fallbackLocale, defaultLocale } = useI18n<undefined, string>()
   if (locale in obj) {
     return obj[locale]
   }
 
-  let fallback: Locale = defaultLocale
+  let fallback: string = defaultLocale
   if (typeof fallbackLocale.value === 'object' && !Array.isArray(fallbackLocale.value)) {
     fallback =
       fallbackLocale.value[locale].find(l => l in obj) ??

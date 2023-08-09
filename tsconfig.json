@@ -3,7 +3,7 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -13,23 +13,11 @@
     "noEmit": true,
     "noUnusedLocals": true,
     "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
     "types": [
       "node"
-    ],
-    "paths": {
-      "#core": [
-        "./packages/core/src/index"
-      ],
-      "#core/*": [
-        "./packages/core/src/*"
-      ],
-      "#blizzard": [
-        "./packages/blizzard/src/index"
-      ],
-      "#blizzard/*": [
-        "./packages/blizzard/src/*"
-      ]
-    }
+    ]
   },
   "exclude": [
     "**/dist/**"

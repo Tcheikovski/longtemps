@@ -1,4 +1,5 @@
 export * from './Api'
+export * from './Auth'
 export * from './Faction'
 export * from './Gender'
 export * from './Locale'

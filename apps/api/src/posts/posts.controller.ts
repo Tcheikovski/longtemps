@@ -13,7 +13,11 @@ import { UpdatePostDto } from './dto/update-post.dto'
 
 @Controller('posts')
 export class PostsController {
-  constructor (private readonly postsService: PostsService) {}
+  private readonly postsService: PostsService
+
+  constructor (postsService: PostsService) {
+    this.postsService = postsService
+  }
 
   @Post()
   create (@Body() createPostDto: CreatePostDto) {

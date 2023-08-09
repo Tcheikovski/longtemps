@@ -19,7 +19,8 @@
     "/packages/blizzard/src/api/realm",
     "/packages/blizzard/src/api/region",
     "/packages/blizzard/src/api/resource",
-    "/packages/blizzard/src/types/resources"
+    "/packages/blizzard/src/types/resources",
+    "/packages/core/src/di"
   ],
   "exportall.config.semis": false,
   "exportall.config.quote": "'"

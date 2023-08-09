@@ -1,19 +1,10 @@
-import { PlayableSpecializationMedia } from '@blizzard'
-import { H3Event } from 'h3'
+import type { PlayableSpecialization } from '@longtemps/blizzard'
 
-const getPlayableSpecializationMedia = async (event: H3Event) => {
-  const id = getRouterParam(event, 'id')
-  const blizzardFetch = await useBlizzardFetch(event)
-  const playableSpecializationMedia = await blizzardFetch.static<PlayableSpecializationMedia>(
-    `/data/wow/media/playable-specialization/${id}`
-  )
-  return playableSpecializationMedia
-}
-
-const getCachedPlayableSpecializationMedia = cachedFunction(getPlayableSpecializationMedia, {
+export default defineCachedEventHandler(async (event) => {
+  const { id } = getRouterParams(event)
+  return await $blizzardFetch.static<PlayableSpecialization.Media>(`/data/wow/media/playable-specialization/${id}`)
+}, {
   name: 'playable-specialization-media',
-  getKey: event => getRouterParam(event, 'id') ?? '',
-  maxAge: 60 * 60 * 24
+  getKey: event => getRouterParams(event).id,
+  maxAge: 86400 // 1day
 })
-
-export default defineEventHandler(event => getCachedPlayableSpecializationMedia(event))

@@ -9,6 +9,12 @@ import { Guild } from './guild'
 import { Covenant } from './covenant'
 import { Media, MediaAsset } from './media'
 
+export interface Title {
+  id: number;
+  name: Translatable;
+  display_string: Translatable;
+}
+
 export interface Character {
   id: number;
   name: string;
@@ -50,10 +56,4 @@ export interface Character {
 
 export interface CharacterMedia extends Media {
   assets: MediaAsset<'avatar' | 'inset' | 'main-raw'>[];
-}
-
-export interface Title {
-  id: number;
-  name: Translatable;
-  display_string: Translatable;
 }

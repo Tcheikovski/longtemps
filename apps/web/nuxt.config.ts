@@ -1,9 +1,9 @@
 import { createResolver } from '@nuxt/kit'
 
 const resolver = createResolver(import.meta.url)
-
 export default defineNuxtConfig({
   srcDir: './src',
+
   modules: [
     '@nuxtjs/i18n',
     '@nuxtjs/tailwindcss',
@@ -13,12 +13,15 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-lodash'
   ],
+
   runtimeConfig: {
     auth: {
+      origin: '',
+      basePath: '',
       secret: ''
     },
     keycloak: {
-      host: '',
+      origin: '',
       realm: '',
       clientId: '',
       clientSecret: ''
@@ -36,35 +39,24 @@ export default defineNuxtConfig({
       }
     }
   },
-  alias: {
-    '@blizzard': resolver.resolve('./src/blizzard')
-  },
-  imports: {
-    dirs: [resolver.resolve('./src/stores')]
-  },
+
   auth: {
-    origin: 'https://longtemps.org',
-    defaultProvider: 'keycloak'
+    origin: process.env.NUXT_AUTH_ORIGIN,
+    basePath: process.env.NUXT_AUTH_BASE_PATH,
+    defaultProvider: 'keycloak',
+    enableSessionRefreshOnWindowFocus: false,
+    enableSessionRefreshPeriodically: false
   },
-  devServer: {
-    port: 7000
-  },
-  typescript: {
-    strict: true,
-    typeCheck: false,
-    tsConfig: {
-      compilerOptions: {
-        experimentalDecorators: true
-      }
-    }
-  },
+
   tailwindcss: {
     configPath: resolver.resolve('./src/tailwind.config.ts'),
     cssPath: resolver.resolve('./src/assets/tailwind.scss')
   },
+
   pinia: {
     autoImports: ['defineStore', 'storeToRefs']
   },
+
   i18n: {
     defaultLocale: 'fr_FR',
     vueI18n: './src/i18n.config.ts',
@@ -84,17 +76,36 @@ export default defineNuxtConfig({
       { code: 'zh_CN', iso: 'zh-CN' }
     ]
   },
+
+  devServer: {
+    port: Number(process.env.PORT)
+  },
+
   vite: {
     server: {
       hmr: {
         protocol: 'wss',
         clientPort: 443,
-        port: 24678,
-        path: 'hmr/'
+        port: Number(process.env.PORT_WS),
+        path: 'hmr/',
+        timeout: 5
       }
     }
   },
+
+  imports: {
+    dirs: [resolver.resolve('./src/stores')]
+  },
+
   nitro: {
+    storage: {
+      auth: { driver: 'lruCache' }
+    },
+
+    externals: {
+      external: ['@longtemps/core', '@longtemps/blizzard']
+    },
+
     esbuild: {
       options: {
         tsconfigRaw: {
@@ -105,22 +116,26 @@ export default defineNuxtConfig({
         }
       }
     },
+
     typescript: {
       tsConfig: {
+        extends: resolver.resolve('../../tsconfig.json'),
         compilerOptions: {
           experimentalDecorators: true,
           target: 'ES2016'
         }
       }
-    },
-    storage: {
-      blizzard: {
-        driver: 'fs',
-        base: './data/blizzard'
-      },
-      keycloak: {
-        driver: 'fs',
-        base: './data/keycloak'
+    }
+
+  },
+
+  typescript: {
+    strict: true,
+    typeCheck: false,
+    tsConfig: {
+      extends: resolver.resolve('../../tsconfig.json'),
+      compilerOptions: {
+        experimentalDecorators: true
       }
     }
   }

@@ -1,23 +1,13 @@
-import { H3Event } from 'h3'
-import { GuildRoster } from '@blizzard'
+import { Guild } from '@longtemps/blizzard'
 
-const getGuildRoster = async (event: H3Event) => {
-  const realmSlug = getRouterParam(event, 'realmSlug')
-  const nameSlug = getRouterParam(event, 'nameSlug')
-  const blizzardFetch = await useBlizzardFetch(event)
-  const guildRoster = await blizzardFetch.profile<GuildRoster>(`/data/wow/guild/${realmSlug}/${nameSlug}/roster`)
-
-  return guildRoster
-}
-
-const getCachedGuildRoster = cachedFunction(getGuildRoster, {
+export default defineCachedEventHandler(async (event) => {
+  const { realmSlug, nameSlug } = getRouterParams(event)
+  return await $blizzardFetch.profile<Guild.Roster>(`/data/wow/guild/${realmSlug}/${nameSlug}/roster`)
+}, {
   name: 'guild-roster',
   getKey: (event) => {
-    const realmSlug = getRouterParam(event, 'realmSlug')
-    const nameSlug = getRouterParam(event, 'nameSlug')
-    return `${realmSlug}/${nameSlug}`
+    const { realmSlug, nameSlug } = getRouterParams(event)
+    return `${nameSlug}-${realmSlug}`
   },
-  maxAge: 60
+  maxAge: 86400 // 1 day
 })
-
-export default defineEventHandler(event => getCachedGuildRoster(event))

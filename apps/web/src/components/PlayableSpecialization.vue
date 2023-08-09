@@ -9,8 +9,5 @@ const props = defineProps<{
   id: number;
 }>()
 
-const store = usePlayableSpecializationStore()
-const { state: playableSpecialization, isReady } = store.usePlayableSpecialization(props.id.toString())
-
-await until(isReady).toBe(true)
+const { state: playableSpecialization } = await usePlayableSpecializationAsync(undefined, () => props.id)
 </script>

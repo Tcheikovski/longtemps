@@ -1,4 +1,8 @@
-import { Api, PlayableClass, PlayableSpecialization, Spell, Translatable } from '#blizzard/types'
+import { Api } from '../Api'
+import { Translatable } from '../Translatable'
+import { PlayableClass } from './PlayableClass'
+import { PlayableSpecialization } from './PlayableSpecialization'
+import { Spell } from './Spell'
 
 export interface Talent extends Api.Resource {
   spell: Api.Ref<Spell, 'name'>

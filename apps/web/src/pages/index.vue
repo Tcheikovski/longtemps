@@ -34,11 +34,10 @@
 </template>
 
 <script lang="ts" setup>
-const store = useGuildStore()
 const { data: auth, status, signIn } = useAuth()
-const { roster, isRosterReady } = storeToRefs(store)
 const { t } = useI18n()
 
+const { state: roster, isReady: isRosterReady } = useGuildRoster()
 await until(status)
   .not.toBe('loading')
   .then(() => (status.value === 'authenticated' ? until(isRosterReady).toBe(true) : Promise.resolve(true)))
@@ -49,9 +48,8 @@ const name = computed(() => useUpperFirst(username.value?.name) || t('guest'))
 const onSignin = () => signIn('keycloak').then<void>()
 
 const userCharacters = computed(() => {
-  const userCharacters = auth.value?.user?.wowAccounts?.flatMap(account => account.characters) ?? []
-  return roster.value?.members
-    .filter(({ character }) => userCharacters.some(({ id }) => character.id === id))
+  const userCharacters = auth.value?.user?.profile?.wow_accounts?.flatMap(account => account.characters) ?? []
+  return roster.value?.members?.filter(({ character }) => userCharacters.some(({ id }) => character.id === id))
     .sort(({ rank: a }, { rank: b }) => a - b)
     .map(({ character }) => character)
 })

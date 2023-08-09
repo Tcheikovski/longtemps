@@ -1,10 +1,11 @@
-import { Translatable } from '#blizzard/types'
+import { Translatable } from './Translatable'
+
+export interface Role {
+  type: Role.Type
+  name: Translatable
+}
 
 export namespace Role {
-  export interface Role {
-    type: Role.Type
-    name: Translatable
-  }
 
   export type Type = 'DAMAGE' | 'HEALER' | 'TANK'
   export type TypeKey = Lowercase<Type>

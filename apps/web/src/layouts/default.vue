@@ -7,9 +7,9 @@
       class="flex-1 relative overflow-auto scrollbar-thin scrollbar-track-neutral-700 scrollbar-corner-neutral-700 scrollbar-thumb-neutral-500"
     >
       <div class="min-h-full flex flex-col">
-        <LayoutBanner class="flex-0" />
         <div class="flex-1 flex">
           <main class="min-h-full w-full">
+            <LayoutBanner />
             <slot />
           </main>
         </div>

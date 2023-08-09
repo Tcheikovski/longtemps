@@ -1,8 +1,14 @@
-import { Achievement, Api, Character, Faction, Realm } from '#blizzard/types'
+import { Api } from '../Api'
+import { Faction } from '../Faction'
+import { Achievement } from './Achievement'
+import { Character } from './Character'
+import { PlayableClass } from './PlayableClass'
+import { PlayableRace } from './PlayableRace'
+import { Realm } from './Realm'
 
 export interface Guild extends Api.Resource {
   name: string;
-  faction: Faction.Faction;
+  faction: Faction;
   achievement_points: number;
   member_count: number;
   realm: Api.Ref<Realm, 'name' | 'slug'>;
@@ -74,7 +80,7 @@ export namespace Guild {
   }
 
   export namespace Activity {
-    export type Type = 'CHARACTER_ACHIEVEMENT';
+    export type Type = 'ENCOUNTER' | 'CHARACTER_ACHIEVEMENT';
     export interface TypeObject<T extends Type = Type> {
       type: T
     }
@@ -92,6 +98,28 @@ export namespace Guild {
       }
     }
 
+    export interface MythicKeystone extends Base {
+      activity: TypeObject<'ENCOUNTER'>
+      encounter_completed: {
+        encounter: Journal
+      }
+    }
+
     export type Element = CharacterAchievement
+  }
+
+  export interface Roster {
+    guild: Api.Ref<Guild, 'name' | 'realm' | 'faction'>
+    members: Roster.Member[]
+  }
+
+  export namespace Roster {
+    export interface Member {
+      character: Api.Ref<Character, 'name' | 'realm' | 'level', {
+        playable_class: Api.Ref<PlayableClass>
+        playable_race: Api.Ref<PlayableRace>
+      }>
+      rank: number
+    }
   }
 }

@@ -7,9 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-const store = useGuildStore()
-const { roster, isRosterReady } = storeToRefs(store)
-await until(isRosterReady).toBe(true)
+const { state: roster } = await useGuildRosterAsync()
 
 const displayedMembers = ref(10)
 const members = computed(() => roster.value?.members.slice().sort((a, b) => a.rank - b.rank) ?? [])

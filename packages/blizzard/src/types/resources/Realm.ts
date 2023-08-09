@@ -1,4 +1,7 @@
-import { Api, Locale, Region, Translatable } from '#blizzard/types'
+import { Api } from '../Api'
+import { Locale } from '../Locale'
+import { Translatable } from '../Translatable'
+import { Region } from './Region'
 
 export interface Realm extends Api.Resource {
   region: Api.Ref<Region, 'name'>
