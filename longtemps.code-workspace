@@ -1,0 +1,42 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "app"
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "app/node_modules/typescript/lib",
+    "eslint.nodePath": "app/node_modules/eslint/bin/eslint.js",
+    "prettier.configPath": "app/.prettierrc",
+    "exportall.config.semis": false,
+    "exportall.config.quote": "'",
+    "exportall.config.folderListener": [
+      "/app/packages/blizzard/src/constants",
+      "/app/packages/blizzard/src/entities/entities",
+      "/app/packages/blizzard/src/entities/entities/playable_race",
+      "/app/packages/blizzard/src/entities/entities/playable_class",
+      "/app/packages/blizzard/src/entities/entities/playable_specialization",
+      "/app/packages/blizzard/src/entities/entities/spell",
+      "/app/packages/blizzard/src/entities/entities/talent",
+      "/app/packages/blizzard/src/types",
+      "/app/packages/blizzard/src/entities/entities/covenant",
+      "/app/packages/blizzard/src/api",
+      "/app/packages/blizzard/src/api/achivement",
+      "/app/packages/blizzard/src/api/power_type",
+      "/app/packages/blizzard/src/api/powerType",
+      "/app/packages/blizzard/src/api/title",
+      "/app/packages/blizzard/src/api/realm",
+      "/app/packages/blizzard/src/api/region",
+      "/app/packages/blizzard/src/api/resource",
+      "/app/packages/blizzard/src/types/resources",
+      "/app/packages/core/src/di"
+    ]
+  },
+  "extensions": {
+    "recommendations": ["vue.volar", "eliostruyf.vscode-typescript-exportallmodules"],
+    "unwantedRecommendations": ["octref.vetur", "vscode.typescript-language-features"]
+  }
+}
